@@ -77,8 +77,6 @@ if __name__ == '__main__':
 
    while True:
       try:
-         #exemplo_de_cabecalho.set(getRandomNumber()*2)
-
 
          # Gerar dinamicamente os gráficos de agrupamento
          items = filtrarResumo(getDetalhamento)
