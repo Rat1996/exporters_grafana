@@ -1,34 +1,9 @@
 #!/usr/bin/python3
-import random
 import prometheus_client as prom
 import subprocess
 import time
 import re
 #importa os modulos
-
-#============================headers===============================
-
-#gera o formato da metrica no prometheus
-#exemplo_de_cabecalho = prom.Gauge('contador1' , 'Exemplo de titulo')
-
-#ebt_spo1_5061 = prom.Gauge('freeswitch_channels_active_spo1','Freeswitch active channels count')
-#ebt_spo2_5062 = prom.Gauge('freeswitch_channels_active_spo2','Freeswitch active channels count')
-#ebt_spo3_5063 = prom.Gauge('freeswitch_channels_active_spo3','Freeswitch active channels count')
-#open_english = prom.Gauge('freeswitch_channels_active_open_english','Freeswitch active channels count')
-#hiya_reput_spo1 = prom.Gauge('freeswitch_channels_active_hiya_reput_spo1','Freeswitch active channels count')
-#sp_tdm11 = prom.Gauge('freeswitch_channels_active_sp_tdm11','Freeswitch active channels count')
-#sp_tdm21 = prom.Gauge('freeswitch_channels_active_sp_tdm21','Freeswitch active channels count')
-#ebt_cnl21 = prom.Gauge('freeswitch_channels_active_ebt_cnl21','Freeswitch active channels count')
-
-#============================Functions===============================
-
-
-#funcao que executa o numero aleatorio num range de 5 a 1000 de 5 em 5
-#def getRandomNumber():
-#	numero_random = random.randrange(5,1000,5)
-#	return numero_random
-
-
 
 ###  Agrupamento de PIPES [INÍCIO]  ###
 
@@ -100,8 +75,6 @@ def setarValorGauge(variavel: str, valor: int):
 if __name__ == '__main__':
    prom.start_http_server(3734)
 
-#enquanto verdadeiro, imprime a metrica chamando a funcao getrandomnumber
-#neste caso sempre vai ser verdadeiro, pra que possa sempre imprimir de novo
    while True:
       try:
          #exemplo_de_cabecalho.set(getRandomNumber()*2)
